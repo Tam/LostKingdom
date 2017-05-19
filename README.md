@@ -7,6 +7,9 @@ A tiny and blazing-fast fuzzy search in JavaScript (stolen *(but modified)* from
 ### [Create Element](https://github.com/Tam/In-the-Lost-Kingdom-of-JavaScript---The-Vanilla-Snippets/blob/master/createElement.js)
 Quick and easy DOM element creation
 
+### [Debounce](https://github.com/Tam/In-the-Lost-Kingdom-of-JavaScript---The-Vanilla-Snippets/blob/master/debounce.js)
+A function, that, as long as it continues to be invoked, will not be triggered (good for preventing spam from `input` events). (Supports React)
+
 ---
 
 ## TODO

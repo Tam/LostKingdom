@@ -6,7 +6,7 @@
  * @param {object=} attributes - The attributes to add, mapping the key as
  *     the attribute name, and the value as its value. If the value is a
  *     function, it will be added as an event.
- * @param {Array=} children - An array of children (can be a mixture of
+ * @param {(Array|*)=} children - An array of children (can be a mixture of
  *     Nodes to append, or other values to be stringified and appended
  *     as text).
  * @return {Element} - The created element

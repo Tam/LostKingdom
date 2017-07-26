@@ -11,7 +11,7 @@
  *     as text).
  * @return {Element} - The created element
  */
-createElement (tag = "div", attributes = {}, children = []) {
+function createElement (tag = "div", attributes = {}, children = []) {
 	const elem = document.createElement(tag);
 
 	for (let [key, value] of Object.entries(attributes)) {

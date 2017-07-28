@@ -9,6 +9,7 @@
  *
  * timer.pause();
  * timer.resume();
+ * timer.restart();
  * ```
  *
  * @param {Function} callback
@@ -34,6 +35,12 @@ export function IntervalTimer (callback, interval) {
 		window.setTimeout(this.timeoutCallback, remaining);
 	};
 	
+	this.restart = function () {
+		startTime = new Date();
+		timerId = window.setInterval(callback, interval);
+		state = 1;
+	};
+	
 	this.timeoutCallback = function () {
 		if (state !== 3) return;
 		
@@ -44,7 +51,5 @@ export function IntervalTimer (callback, interval) {
 		state = 1;
 	};
 	
-	startTime = new Date();
-	timerId = window.setInterval(callback, interval);
-	state = 1;
+	this.restart();
 }

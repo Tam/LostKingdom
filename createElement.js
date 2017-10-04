@@ -11,7 +11,11 @@
  *     as text).
  * @return {Element} - The created element
  */
-export default function createElement (tag = "div", attributes = {}, children = []) {
+export default function createElement (
+	tag = "div", 
+	attributes = {}, 
+	children = []
+) {
 	const elem = document.createElement(tag);
 	
 	for (let [key, value] of Object.entries(attributes)) {

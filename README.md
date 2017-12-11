@@ -13,6 +13,9 @@ A function, that, as long as it continues to be invoked, will not be triggered (
 ### [IntervalTimer](https://github.com/Tam/LostKingdom/blob/master/IntervalTimer.js)
 A pause-able interval timer, great for looping banners that you want to pause on hover. Once un-paused, it will wait out the amount of time it would have had to wait if not paused, before continuing.
 
+### [Format Date](https://github.com/Tam/LostKingdom/blob/master/formatDate.js)
+A JS implementation of PHP's date formatter. Originally from https://github.com/jacwright/date.format, modified, tidied, and updated for ES6.
+
 ---
 
 ## TODO

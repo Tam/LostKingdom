@@ -439,4 +439,4 @@ export default function format (date, format) {
 	return format.replace(/(\\?)(.)/g, function(_, esc, chr) {
 		return (esc === '' && replaceChars[chr]) ? replaceChars[chr].call(date) : chr;
 	});
-};
+}

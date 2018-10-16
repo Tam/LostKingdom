@@ -25,7 +25,7 @@
  * @param {boolean=} immediate - Fire on the leading edge
  * @returns {Function}
  */
-function debounce (func, wait = 300, immediate = false) {
+export default function debounce (func, wait = 300, immediate = false) {
 	let timeout;
 	
 	if (wait === 0) {

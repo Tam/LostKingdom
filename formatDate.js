@@ -425,7 +425,7 @@ const replaceChars = {
 	 * @returns {number}
 	 */
 	U: function () {
-		return this.getTime() / 1000;
+		return Math.floor(this.getTime() / 1000);
 	},
 };
 

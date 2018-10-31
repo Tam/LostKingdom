@@ -16,6 +16,9 @@ A pause-able interval timer, great for looping banners that you want to pause on
 ### [Format Date](https://github.com/Tam/LostKingdom/blob/master/formatDate.js)
 A JS implementation of PHP's date formatter. Originally from https://github.com/jacwright/date.format, modified, tidied, and updated for ES6.
 
+### [Ago](https://github.com/Tam/LostKingdom/blob/master/ago.js)
+Convert the given Date or timestamp to words, "2 days ago".
+
 ---
 
 ## TODO

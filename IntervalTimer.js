@@ -16,7 +16,7 @@
  * @param {number} interval
  * @constructor
  */
-export function IntervalTimer (callback, interval) {
+export default function IntervalTimer (callback, interval) {
 	let timerId, startTime, remaining = 0;
 	let state = 0; //  0 = idle, 1 = running, 2 = paused, 3 = resumed
 	

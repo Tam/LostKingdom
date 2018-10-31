@@ -10,7 +10,7 @@
  * @param {boolean} caseSensitive - Should the search be case sensitive?
  * @return {boolean} - Whether or not we have a match
  */
-fuzzy (needle, haystack, caseSensitive = false) {
+export default function fuzzy (needle, haystack, caseSensitive = false) {
 	if (typeof haystack === typeof {})
 		haystack = JSON.stringify(Object.values(haystack));
 

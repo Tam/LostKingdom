@@ -1,7 +1,7 @@
 /**
  * Checks if the given element has a valid name and value, and isn't disabled
  *
- * @param {Element} element
+ * @param {Element|HTMLInputElement|HTMLSelectElement|HTMLTextAreaElement} element
  * @return {Boolean}
  */
 function isValidElement (element) {
@@ -21,7 +21,7 @@ function isValidElement (element) {
  * Checks if the given elements value can be saved
  * (i.e. not an unchecked checkbox)
  *
- * @param {Element} element
+ * @param {Element|HTMLInputElement} element
  * @return {Boolean}
  */
 function isValidValue (element) {
@@ -31,7 +31,7 @@ function isValidValue (element) {
 /**
  * Checks if the given element is a checkbox
  *
- * @param {Element} element
+ * @param {Element|HTMLInputElement} element
  * @return {Boolean}
  */
 function isCheckbox (element) {
@@ -41,7 +41,7 @@ function isCheckbox (element) {
 /**
  * Checks if the given element is a select w/ the multiple attribute
  *
- * @param {Element} element
+ * @param {Element|HTMLSelectElement} element
  * @return {Boolean}
  */
 function isMultiSelect (element) {

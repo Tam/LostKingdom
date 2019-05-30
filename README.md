@@ -19,6 +19,9 @@ A JS implementation of PHP's date formatter. Originally from https://github.com/
 ### [Ago](https://github.com/Tam/LostKingdom/blob/master/ago.js)
 Convert the given Date or timestamp to words, "2 days ago".
 
+### [Form to Object](https://github.com/Tam/LostKingdom/blob/master/formToObj.js)
+Converts the given form elements to an object.
+
 ---
 
 ## TODO

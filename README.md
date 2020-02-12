@@ -25,6 +25,9 @@ Converts the given form elements to an object.
 ### [Array Trim](arrayTrim.js)
 Will trim all falsy values from the end of an array
 
+### [cls](cls.js)
+An easy way to dynamically merge CSS module classes into a string.
+
 ---
 
 ## TODO

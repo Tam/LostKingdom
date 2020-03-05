@@ -28,6 +28,9 @@ Will trim all falsy values from the end of an array
 ### [cls](cls.js)
 An easy way to dynamically merge CSS module classes into a string.
 
+### [random](random.js)
+A small collection of simple random generators (int, float, & bool).
+
 ---
 
 ## TODO

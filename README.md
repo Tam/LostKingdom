@@ -1,5 +1,5 @@
 # In the Lost Kingdom of JavaScript - The Vanilla Snippets
-A useful collection of JavaScript snippets
+A useful collection of JavaScript (and other) snippets
 
 ### [Fuzzy](fuzzy.js)
 A tiny and blazing-fast fuzzy search in JavaScript (stolen *(but modified)* from [@bevacqua](https://github.com/bevacqua/fuzzysearch))
@@ -30,6 +30,9 @@ An easy way to dynamically merge CSS module classes into a string.
 
 ### [random](random.js)
 A small collection of simple random generators (int, float, & bool).
+
+### [Self-resizing Textarea](self-resizing-textarea.html)
+A textarea that will automatically resize to fit its text content.
 
 ---
 

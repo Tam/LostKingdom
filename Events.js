@@ -29,7 +29,7 @@ export function EventTrigger (event, ...args) {
  *
  * @param {string} event
  * @param {Function} func
- * @return {function(): void}
+ * @return {function(): void} - The unsubscribe function
  */
 export function EventSubscribe (event, func) {
 	if (!Events.hasOwnProperty(event))

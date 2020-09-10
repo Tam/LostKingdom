@@ -34,6 +34,9 @@ A small collection of simple random generators (int, float, & bool).
 ### [Self-resizing Textarea](self-resizing-textarea.html)
 A textarea that will automatically resize to fit its text content.
 
+### [Events](Events.js)
+A tiny event system
+
 ---
 
 ## TODO

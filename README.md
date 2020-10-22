@@ -37,6 +37,9 @@ A textarea that will automatically resize to fit its text content.
 ### [Events](Events.js)
 A tiny event system
 
+### [Ordinal](ordinal.js)
+Will take a given number and append the appropriate ordinal
+
 ---
 
 ## TODO

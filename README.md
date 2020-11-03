@@ -40,6 +40,9 @@ A tiny event system
 ### [Ordinal](ordinal.js)
 Will take a given number and append the appropriate ordinal
 
+### [uuid](uuid.js)
+Random UUID v4 generation
+
 ---
 
 ## TODO

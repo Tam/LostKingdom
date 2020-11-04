@@ -4,11 +4,14 @@
  * hiding and pluralising values accordingly.
  *
  * @param {Date|number|string} date
- * @return {string}
+ * @return {string|null}
  */
 export default function until (date) {
 	date = new Date(date);
 	const now = new Date();
+
+	if (date < now)
+		return null;
 
 	let y = date.getFullYear() - now.getFullYear(),
 		m = date.getMonth() - now.getMonth(),

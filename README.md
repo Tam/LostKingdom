@@ -1,6 +1,27 @@
 # In the Lost Kingdom of JavaScript - The Vanilla Snippets
 A useful collection of JavaScript (and other) snippets
 
+## Date
+
+### [Format Date](formatDate.js)
+A JS implementation of PHP's date formatter. Originally from https://github.com/jacwright/date.format, modified, tidied, and updated for ES6.
+
+### [Ago](ago.js)
+Convert the given Date or timestamp to words, "2 days ago".
+
+### [Ordinal](ordinal.js)
+Will take a given number and append the appropriate ordinal
+
+## Generation
+
+### [random](random.js)
+A small collection of simple random generators (int, float, & bool).
+
+### [uuid](uuid.js)
+Random UUID v4 generation
+
+## Misc
+
 ### [Fuzzy](fuzzy.js)
 A tiny and blazing-fast fuzzy search in JavaScript (stolen *(but modified)* from [@bevacqua](https://github.com/bevacqua/fuzzysearch))
 
@@ -13,12 +34,6 @@ A function, that, as long as it continues to be invoked, will not be triggered (
 ### [IntervalTimer](IntervalTimer.js)
 A pause-able interval timer, great for looping banners that you want to pause on hover. Once un-paused, it will wait out the amount of time it would have had to wait if not paused, before continuing.
 
-### [Format Date](formatDate.js)
-A JS implementation of PHP's date formatter. Originally from https://github.com/jacwright/date.format, modified, tidied, and updated for ES6.
-
-### [Ago](ago.js)
-Convert the given Date or timestamp to words, "2 days ago".
-
 ### [Form to Object](formToObj.js)
 Converts the given form elements to an object.
 
@@ -28,22 +43,8 @@ Will trim all falsy values from the end of an array
 ### [cls](cls.js)
 An easy way to dynamically merge CSS module classes into a string.
 
-### [random](random.js)
-A small collection of simple random generators (int, float, & bool).
-
 ### [Self-resizing Textarea](self-resizing-textarea.html)
 A textarea that will automatically resize to fit its text content.
 
 ### [Events](Events.js)
 A tiny event system
-
-### [Ordinal](ordinal.js)
-Will take a given number and append the appropriate ordinal
-
-### [uuid](uuid.js)
-Random UUID v4 generation
-
----
-
-## TODO
-- [ ] Add usage examples

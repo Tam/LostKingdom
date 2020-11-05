@@ -45,6 +45,11 @@ A tiny and blazing-fast fuzzy search in JavaScript (stolen *(but modified)* from
 ### [Debounce](debounce.js)
 A function, that, as long as it continues to be invoked, will not be triggered (good for preventing spam from `input` events). (Supports React)
 
+## Maths
+
+### [Clamp](clamp.js)
+Clamp a number between the given min and max
+
 ## Misc
 
 ### [IntervalTimer](IntervalTimer.js)

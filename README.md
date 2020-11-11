@@ -17,7 +17,7 @@ Will take a given number and append the appropriate ordinal
 
 ## String
 
-### [capitalize](caplitalize.js)
+### [capitalize](capitalize.js)
 Capitalize the first letter of the given string
 
 ## Generation

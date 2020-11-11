@@ -15,6 +15,11 @@ Convert the given Date or timestamp to words, "2 years, 3 months, ..."
 ### [Ordinal](ordinal.js)
 Will take a given number and append the appropriate ordinal
 
+## String
+
+### [capitalize](caplitalize.js)
+Capitalize the first letter of the given string
+
 ## Generation
 
 ### [random](random.js)

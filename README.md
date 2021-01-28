@@ -15,6 +15,9 @@ Convert the given Date or timestamp to words, "2 years, 3 months, ..."
 ### [Ordinal](ordinal.js)
 Will take a given number and append the appropriate ordinal
 
+### [Dates to Duration](datesToDuration.js)
+Converts the given dates into a human readable duration, "1h 10m"
+
 ## String
 
 ### [capitalize](capitalize.js)

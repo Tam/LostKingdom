@@ -1,33 +1,48 @@
 const Events = {};
 
+/**
+ * Self incrementing bit (increments by 1 every time it's called)
+ *
+ * @returns {number}
+ */
+const iota = (i => () => 1 << ++i)(-1);
+
+/**
+ * The Event types
+ *
+ * @type {Object}
+ */
 export const EventTypes = {
-	MyEventName: 'MyEventName',
+	MyEventA: iota(),
+	MyEventB: iota(),
 };
 
 /**
  * Trigger an event
  *
- * EventTrigger(EventTypes.MyEventName, ...args);
+ * EventTrigger(EventTypes.MyEventA, ...args);
  *
- * @param {string} event
+ * @param {string} event - A single event type
  * @param {*} args
  */
 export function EventTrigger (event, ...args) {
-	if (!Events.hasOwnProperty(event)) return;
+	const callbacks = Object.entries(Events);
 
-	for (let i = 0, l = Events[event].length; i < l; i++)
-		Events[event][i](...args);
+	for (let [bit, cbs] of callbacks)
+		if ((bit & event) === event)
+			for (let i = 0, l = cbs.length; i < l; i++)
+				cbs[i](...args);
 }
 
 /**
  * Subscribe to an event
  *
  * useEffect(
- *   () => EventSubscribe(EventTypes.MyEventName, (...args) => {}),
+ *   () => EventSubscribe(EventTypes.MyEventA|EventTypes.MyEventB, (...args) => {}),
  *   []
  * );
  *
- * @param {string} event
+ * @param {string} event - One or more event types, Bitwise OR'd together
  * @param {Function} func
  * @return {function(): void} - The unsubscribe function
  */

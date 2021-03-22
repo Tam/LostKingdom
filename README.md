@@ -1,6 +1,11 @@
 # In the Lost Kingdom of JavaScript - The Vanilla Snippets
 A useful collection of JavaScript (and other) snippets
 
+## Array
+
+### [Shuffle](shuffle.js)
+Randomly shuffle the given array (returns the shuffled result).
+
 ## Date
 
 ### [Format Date](formatDate.js)

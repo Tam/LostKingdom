@@ -22,7 +22,7 @@ export const EventTypes = {
  *
  * EventTrigger(EventTypes.MyEventA, ...args);
  *
- * @param {string} event - A single event type
+ * @param {number} event - A single event type
  * @param {*} args
  */
 export function EventTrigger (event, ...args) {
@@ -42,7 +42,7 @@ export function EventTrigger (event, ...args) {
  *   []
  * );
  *
- * @param {string} event - One or more event types, Bitwise OR'd together
+ * @param {number} event - One or more event types, Bitwise OR'd together
  * @param {Function} func
  * @return {function(): void} - The unsubscribe function
  */

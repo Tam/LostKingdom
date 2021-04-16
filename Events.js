@@ -12,7 +12,7 @@ const iota = (i => () => 1 << ++i)(-1);
  *
  * @type {Object}
  */
-export const EventTypes = {
+export const Event = {
 	MyEventA: iota(),
 	MyEventB: iota(),
 };
@@ -20,12 +20,12 @@ export const EventTypes = {
 /**
  * Trigger an event
  *
- * EventTrigger(EventTypes.MyEventA, ...args);
+ * Emit(EventTypes.MyEventA, ...args);
  *
  * @param {number} event - A single event type
  * @param {*} args
  */
-export function EventTrigger (event, ...args) {
+export function Emit (event, ...args) {
 	const callbacks = Object.entries(Events);
 
 	for (let [bit, cbs] of callbacks)
@@ -38,7 +38,7 @@ export function EventTrigger (event, ...args) {
  * Subscribe to an event
  *
  * useEffect(
- *   () => EventSubscribe(EventTypes.MyEventA|EventTypes.MyEventB, (...args) => {}),
+ *   () => Listen(EventTypes.MyEventA|EventTypes.MyEventB, (...args) => {}),
  *   []
  * );
  *
@@ -46,7 +46,7 @@ export function EventTrigger (event, ...args) {
  * @param {Function} func
  * @return {function(): void} - The unsubscribe function
  */
-export function EventSubscribe (event, func) {
+export function Listen (event, func) {
 	if (!Events.hasOwnProperty(event))
 		Events[event] = [];
 

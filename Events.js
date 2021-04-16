@@ -20,7 +20,7 @@ export const Event = {
 /**
  * Trigger an event
  *
- * Emit(EventTypes.MyEventA, ...args);
+ * Emit(Event.MyEventA, ...args);
  *
  * @param {number} event - A single event type
  * @param {*} args
@@ -38,7 +38,7 @@ export function Emit (event, ...args) {
  * Subscribe to an event
  *
  * useEffect(
- *   () => Listen(EventTypes.MyEventA|EventTypes.MyEventB, (...args) => {}),
+ *   () => Listen(Event.MyEventA|Event.MyEventB, (...args) => {}),
  *   []
  * );
  *

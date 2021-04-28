@@ -1,3 +1,7 @@
+/*---
+tags: dom,markup
+description: Quick and easy DOM element creation
+---*/
 /**
  * ## Create Element
  * Quick and easy DOM element creation
@@ -12,39 +16,39 @@
  * @return {Element} - The created element
  */
 export default function createElement (
-	tag = "div", 
-	attributes = {}, 
+	tag = "div",
+	attributes = {},
 	children = []
 ) {
 	const elem = document.createElement(tag);
-	
+
 	for (let [key, value] of Object.entries(attributes)) {
 		if (!value) continue;
-		
+
 		if (typeof value === typeof (() => {})) {
 			if (key === "ref") value(elem);
 			else elem.addEventListener(key, value);
 			continue;
 		}
-		
+
 		if (key === "style")
 			value = value.replace(/[\t\r\n]/g, " ").trim();
-		
+
 		elem.setAttribute(key, value);
 	}
-	
+
 	if (!Array.isArray(children))
 		children = [children];
-	
+
 	children.map(child => {
 		if (!child) return;
-		
+
 		try {
 			elem.appendChild(child);
 		} catch (_) {
 			elem.appendChild(document.createTextNode(child));
 		}
 	});
-	
+
 	return elem;
 }

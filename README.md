@@ -1,78 +1,34 @@
-# In the Lost Kingdom of JavaScript - The Vanilla Snippets
-A useful collection of JavaScript (and other) snippets
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Array
+## Getting Started
 
-### [Shuffle](shuffle.js)
-Randomly shuffle the given array (returns the shuffled result).
+First, run the development server:
 
-## Date
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-### [Format Date](formatDate.js)
-A JS implementation of PHP's date formatter. Originally from https://github.com/jacwright/date.format, modified, tidied, and updated for ES6
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### [Ago](ago.js)
-Convert the given Date or timestamp to words, "2 days ago"
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-### [Until](until.js)
-Convert the given Date or timestamp to words, "2 years, 3 months, ..."
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-### [Ordinal](ordinal.js)
-Will take a given number and append the appropriate ordinal
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-### [Dates to Duration](datesToDuration.js)
-Converts the given dates into a human readable duration, "1h 10m"
+## Learn More
 
-## String
+To learn more about Next.js, take a look at the following resources:
 
-### [capitalize](capitalize.js)
-Capitalize the first letter of the given string
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-### [kebab](kebab.js)
-Converts a string to kebab-case
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Generation
+## Deploy on Vercel
 
-### [random](random.js)
-A small collection of simple random generators (int, float, & bool)
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-### [uuid](uuid.js)
-Random UUID v4 generation
-
-## DOM
-
-### [cls](cls.js)
-An easy way to dynamically merge CSS module classes into a string
-
-### [Create Element](createElement.js)
-Quick and easy DOM element creation
-
-## Form
-
-### [Form to Object](formToObj.js)
-Converts the given form elements to an object
-
-### [Self-resizing Textarea](self-resizing-textarea.html)
-A textarea that will automatically resize to fit its text content
-
-### [Fuzzy](fuzzy.js)
-A tiny and blazing-fast fuzzy search in JavaScript (stolen *(but modified)* from [@bevacqua](https://github.com/bevacqua/fuzzysearch))
-
-### [Debounce](debounce.js)
-A function, that, as long as it continues to be invoked, will not be triggered (good for preventing spam from `input` events). (Supports React)
-
-## Maths
-
-### [Clamp](clamp.js)
-Clamp a number between the given min and max
-
-## Misc
-
-### [IntervalTimer](IntervalTimer.js)
-A pause-able interval timer, great for looping banners that you want to pause on hover. Once un-paused, it will wait out the amount of time it would have had to wait if not paused, before continuing.
-
-### [Array Trim](arrayTrim.js)
-Will trim all falsy values from the end of an array
-
-### [Events](Events.js)
-A tiny event system
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

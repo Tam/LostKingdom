@@ -1,3 +1,7 @@
+/*---
+tags: math,number
+description: Clamp the given number between a min and max
+---*/
 /**
  * Clamp the given number between a min and max
  *

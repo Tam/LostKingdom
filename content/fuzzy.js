@@ -1,3 +1,7 @@
+/*---
+tags: search,filter
+description: A tiny and blazing-fast fuzzy search
+---*/
 /**
  * ## Fuzzy
  * A tiny and blazing-fast fuzzy search in JavaScript

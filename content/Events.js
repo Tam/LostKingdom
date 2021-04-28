@@ -1,3 +1,6 @@
+/*---
+description: A tiny events system
+---*/
 const Events = {};
 
 /**

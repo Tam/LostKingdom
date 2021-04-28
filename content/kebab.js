@@ -1,3 +1,7 @@
+/*---
+tags: string
+description: Converts the given string to kebab-case
+---*/
 /**
  * Converts the given string to kebab-case
  */

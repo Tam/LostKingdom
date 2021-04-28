@@ -1,3 +1,7 @@
+/*---
+tags: class
+description: Builds a class string from the given args
+---*/
 /**
  * Builds a class string from the given args
  *

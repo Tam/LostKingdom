@@ -1,3 +1,7 @@
+/*---
+tags: date,format
+description: Will take a given number and append the appropriate ordinal
+---*/
 /**
  * Will take a given number and append the appropriate ordinal
  *
@@ -5,7 +9,7 @@
  * ordinal(21) => 21st
  * ordinal(22) => 22nd
  * ordinal(23) => 23rd
- * 
+ *
  * @param {number} n
  * @return {string}
  * @see https://stackoverflow.com/a/44418732/550109

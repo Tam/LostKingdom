@@ -1,3 +1,7 @@
+/*---
+tags: date,format
+description: JS port of PHP's date formatter
+---*/
 class FormatDate {
 
 	// Properties

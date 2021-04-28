@@ -1,3 +1,6 @@
+/*---
+description: Prevent a function from being spammed
+---*/
 /**
  * ## Debounce
  *
@@ -27,20 +30,20 @@
  */
 export default function debounce (func, wait = 300, immediate = false) {
 	let timeout;
-	
+
 	if (wait === 0) {
 		return function () {
 			func.apply(this, arguments);
 		};
 	}
-	
+
 	return function () {
 		const context = this
 			, args = arguments;
-		
+
 		if (args.length && args[0].constructor.name === "SyntheticEvent")
 			args[0].persist();
-		
+
 		const later = function() {
 			timeout = null;
 			if (!immediate) func.apply(context, args);

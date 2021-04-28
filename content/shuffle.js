@@ -1,3 +1,7 @@
+/*---
+tags: array
+description: Randomly shuffles the given array
+---*/
 /**
  * Randomly shuffles the given array
  *

@@ -1,3 +1,7 @@
+/*---
+tags: string
+description: Capitalize the first letter of the given string
+---*/
 /**
  * Capitalize the first letter of the given string
  *

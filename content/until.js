@@ -1,3 +1,7 @@
+/*---
+tags: date,format
+description: Outputs the given date as "X units"
+---*/
 /**
  * Get the time from now until the given date in the format of
  * X years, X months, X weeks, X days, X hours, X minutes, and X seconds

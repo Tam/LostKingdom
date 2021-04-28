@@ -1,3 +1,7 @@
+/*---
+tags: date,time,format
+description: Converts two dates into a human readable duration string
+---*/
 /**
  * Converts two dates into a human readable duration string
  *

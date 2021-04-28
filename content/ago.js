@@ -1,3 +1,7 @@
+/*---
+description: Converts the given date to time ago in words
+tags: time,date,format
+---*/
 const LOCALES = {
 	prefix:    '',
 	suffix:    'ago',

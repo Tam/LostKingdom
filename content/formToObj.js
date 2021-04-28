@@ -1,3 +1,6 @@
+/*---
+description: Converts the given form elements to an object
+---*/
 /**
  * Checks if the given element has a valid name and value, and isn't disabled
  *

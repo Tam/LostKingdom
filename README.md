@@ -28,6 +28,9 @@ Converts the given dates into a human readable duration, "1h 10m"
 ### [capitalize](capitalize.js)
 Capitalize the first letter of the given string
 
+### [kebab](kebab.js)
+Converts a string to kebab-case
+
 ## Generation
 
 ### [random](random.js)

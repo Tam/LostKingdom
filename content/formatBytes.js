@@ -1,3 +1,7 @@
+/*---
+tags: number,format
+description: Format the given bytes to the nearest appropriate size
+---*/
 /**
  * Format the given bytes to the nearest appropriate size
  *

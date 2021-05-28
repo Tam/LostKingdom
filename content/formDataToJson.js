@@ -1,3 +1,7 @@
+/*---
+tags: form
+description: Converts the given FormData to a JSON String
+---*/
 /**
  * Converts the given FormData to a JSON String
  *

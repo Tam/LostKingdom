@@ -32,16 +32,35 @@ export default function Home ({ files }) {
 	const copy = useRef()
 		, search = useRef();
 
-	const [f, setF] = useState([]);
+	const [f, setF] = useState([])
+		, [active, setActive] = useState(0);
 
 	useEffect(() => {
 		if (!search.current)
 			return;
 
 		const onKeyDown = e => {
-			if (e.key === '/') {
-				e.preventDefault();
-				search.current.focus();
+			switch (e.key) {
+				case '/':
+					e.preventDefault();
+					search.current.focus();
+					break;
+				case 'ArrowUp':
+					e.preventDefault();
+					setActive(a => --a < 0 ? 0 : a);
+					break;
+				case 'ArrowDown':
+					e.preventDefault();
+					setF(f => {
+						setActive(a => {
+							a += 1;
+							if (a > f.length - 1) a = f.length - 1;
+							return a;
+						});
+
+						return f;
+					});
+					break;
 			}
 		};
 
@@ -50,10 +69,12 @@ export default function Home ({ files }) {
 		return () => {
 			document.removeEventListener('keydown', onKeyDown);
 		};
-	}, [search]);
+	}, [search, setActive]);
 
 	const onInput = e => {
 		const v = e.target.value.trim();
+
+		setActive(0);
 
 		if (v === '') setF([]);
 		else setF(files.filter(f => filter(v, f)).sort((a, b) => b.score - a.score));
@@ -93,7 +114,7 @@ export default function Home ({ files }) {
 			/>
 
 			<ul className={css.list}>
-				{f.length > 0 ? f.map((file, i) => i === 0 ? (
+				{f.length > 0 ? f.map((file, i) => i === active ? (
 					<li key={file.filename} className={css.item}>
 						<header>
 							<strong>{file.filename}</strong>

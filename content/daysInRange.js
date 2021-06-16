@@ -1,7 +1,7 @@
 /*---
 tags: date
 description: Calculates the number of days between two dates
- ---*/
+---*/
 /**
  * Calculates the number of days between two dates
  *

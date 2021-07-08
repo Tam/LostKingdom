@@ -1,7 +1,7 @@
 /*---
- description: Clamps the number within the given range
- tags: math,number,min,max,clamp
- ---*/
+description: Clamps the number within the given range
+tags: math,number,min,max,clamp
+---*/
 /**
  * Clamps the number within the given range
  *

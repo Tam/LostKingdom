@@ -99,7 +99,7 @@ export default function Home ({ files }) {
 			<textarea
 				ref={copy}
 				className={css.copy}
-				value={f.length ? f[0].contents : ''}
+				value={f.length ? f[active].contents : ''}
 				readOnly
 			/>
 

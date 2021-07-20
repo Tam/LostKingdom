@@ -1,5 +1,5 @@
 /*---
-tags: math
+tags: math,array
 description: A collection of random generator functions
 ---*/
 // Stolen from https://gist.github.com/kerimdzhanov/7529623
@@ -34,3 +34,14 @@ export function getRandomInt(min, max) {
 export function getRandomBool() {
 	return Math.random() >= 0.5;
 }
+
+/**
+ * Returns a random value from the given array
+ *
+ * @param {Array} array
+ * @returns {*}
+ */
+export default function randomFromArray (array) {
+	return array[Math.floor(Math.random() * array.length)];
+}
+

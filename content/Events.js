@@ -3,6 +3,8 @@ description: A tiny events system
 ---*/
 const Events = {};
 
+const DEBUG = process.env.NODE_ENV === 'development';
+
 /**
  * Self incrementing bit (increments by 1 every time it's called)
  *
@@ -29,12 +31,37 @@ export const Event = {
  * @param {*} args
  */
 export function Emit (event, ...args) {
-	const callbacks = Object.entries(Events);
+	DEBUG && console.groupCollapsed(
+		'%cEmit %c' +
+		Object.entries(Events).reduce((a, [name, bit]) => {
+			if ((bit & event) === event)
+				return [...a, name];
 
-	for (let [bit, cbs] of callbacks)
-		if ((bit & event) === event)
-			for (let i = 0, l = cbs.length; i < l; i++)
-				cbs[i](...args);
+			return a;
+		}, []).join(', ') + (args.length > 0 ? '%c:' : ''),
+		'color: grey;',
+		'font-weight: bold;',
+		(args.length > 0 ? 'color: grey;' : ' '),
+		...args
+	);
+
+	const callbacks = Object.entries(_Events);
+
+	for (let [bit, cbs] of callbacks) {
+		if ((bit & event) === event) {
+			for (let i = 0, l = cbs.length; i < l; i++) {
+				cbs[i](...args, event);
+				DEBUG && console.log(
+					'%cListen%c',
+					'color: grey;',
+					'',
+					cbs[i]
+				);
+			}
+		}
+	}
+
+	DEBUG && console.groupEnd();
 }
 
 /**

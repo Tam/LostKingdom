@@ -12,5 +12,5 @@ export default function kebab (str) {
 	)
 		.replace(/[^a-zA-Z\d-]/g, '')
 		.replace(/^-/, '')
-		.replace(/-+/, '-');
+		.replace(/-+/g, '-');
 }

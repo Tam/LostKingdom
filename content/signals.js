@@ -1,7 +1,7 @@
 /*---
 description: A tiny events system
 ---*/
-const Events = {};
+const _SignalListeners = {};
 
 const DEBUG = process.env.NODE_ENV === 'development';
 
@@ -17,39 +17,40 @@ const iota = (i => () => 1 << ++i)(-1);
  *
  * @type {Object}
  */
-export const Event = {
+export const Signal = {
 	MyEventA: iota(),
 	MyEventB: iota(),
 };
 
+const bitsToSignals = Object.entries(Signal).reduce((a, [name, bit]) => {
+	a[bit] = name;
+	return a;
+}, {});
+
 /**
  * Trigger an event
  *
- * Emit(Event.MyEventA, ...args);
+ * Emit(Signal.MyEventA, ...args);
  *
  * @param {number} event - A single event type
  * @param {*} args
  */
 export function Emit (event, ...args) {
-	DEBUG && console.groupCollapsed(
-		'%cEmit %c' +
-		Object.entries(Events).reduce((a, [name, bit]) => {
-			if ((bit & event) === event)
-				return [...a, name];
-
-			return a;
-		}, []).join(', ') + (args.length > 0 ? '%c:' : ''),
+	DEBUG && console.group(
+		'%cEmit %c' + bitsToSignals[event] + (args.length > 0 ? '%c:' : ''),
 		'color: grey;',
 		'font-weight: bold;',
 		(args.length > 0 ? 'color: grey;' : ' '),
 		...args
 	);
 
-	const callbacks = Object.entries(_Events);
+	const callbacks = Object.entries(_SignalListeners);
+	let caught = false;
 
 	for (let [bit, cbs] of callbacks) {
 		if ((bit & event) === event) {
 			for (let i = 0, l = cbs.length; i < l; i++) {
+				caught = true;
 				cbs[i](...args, event);
 				DEBUG && console.log(
 					'%cListen%c',
@@ -61,6 +62,8 @@ export function Emit (event, ...args) {
 		}
 	}
 
+	if (!caught && DEBUG) console.warn('Uncaught event:', bitsToSignals[event]);
+
 	DEBUG && console.groupEnd();
 }
 
@@ -68,7 +71,7 @@ export function Emit (event, ...args) {
  * Subscribe to an event
  *
  * useEffect(
- *   () => Listen(Event.MyEventA|Event.MyEventB, (...args) => {}),
+ *   () => Listen(Signal.MyEventA|Signal.MyEventB, (...args) => {}),
  *   []
  * );
  *
@@ -77,15 +80,16 @@ export function Emit (event, ...args) {
  * @return {function(): void} - The unsubscribe function
  */
 export function Listen (event, func) {
-	if (!Events.hasOwnProperty(event))
-		Events[event] = [];
+	if (!_SignalListeners.hasOwnProperty(event))
+		_SignalListeners[event] = [];
 
-	Events[event].push(func);
+	_SignalListeners[event].push(func);
 
 	return () => {
-		const i = Events[event].indexOf(func);
+		const i = _SignalListeners[event].indexOf(func);
 		if (i === -1) return;
 
-		Events[event].splice(i, 1);
+		_SignalListeners[event].splice(i, 1);
 	};
 }
+

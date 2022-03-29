@@ -1,4 +1,5 @@
 /*---
+tags: event,listen,emit
 description: A tiny events system
 ---*/
 const _SignalListeners = {};

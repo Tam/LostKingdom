@@ -1,6 +1,6 @@
 /*---
- tags: array,collection,object,find
- description: Cherry-picks from the given array of objects, comparing top-level keys against the given compare object.
+tags: array,collection,object,find
+description: Cherry-picks from the given array of objects, comparing top-level keys against the given compare object.
  ---*/
 /**
  * Cherry-picks from the given array of objects, comparing top-level keys

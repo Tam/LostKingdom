@@ -10,11 +10,19 @@ description: A tiny and blazing-fast fuzzy search
  * (but modified slightly, so it's okay)
  *
  * @param {string} needle - The thing to search for
- * @param {string} haystack - The thing to search in
+ * @param {string|string[]} haystack - The thing to search in
  * @param {boolean} caseSensitive - Should the search be case sensitive?
  * @return {boolean} - Whether or not we have a match
  */
 export default function fuzzy (needle, haystack, caseSensitive = false) {
+	if (Array.isArray(haystack)) {
+		for (const straw of haystack)
+			if (fuzzy(needle, straw, caseSensitive))
+				return true;
+		
+		return false;
+	}
+	
 	if (typeof haystack === typeof {})
 		haystack = JSON.stringify(Object.values(haystack));
 

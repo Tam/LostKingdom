@@ -45,3 +45,24 @@ export default function randomFromArray (array) {
 	return array[Math.floor(Math.random() * array.length)];
 }
 
+/**
+ * weightedRandom({
+ *     'a': 0.1, // 10%
+ *     'b': 0.5, // 50%
+ *     'c': 0.4, // 40%
+ * })
+ *
+ * @param {Object} spec
+ * @return {function(): *}
+ */
+export function weightedRandom (spec) {
+	const totalWeights = Object.values(spec).reduce((a, b) => a + b, 0) * 10;
+	let i, j, table = [];
+
+	for (i in spec)
+		for (j = 0; j < spec[i] * totalWeights; j++)
+			table.push(i);
+
+	return () => randomFromArray(table);
+}
+
